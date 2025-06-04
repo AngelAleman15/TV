@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Televisión y Control Remoto</title>
+    <title>MILANESA TV</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <div class="tv-container">
-        <div class="power-indicator"></div>
-        <div class="tv-screen">
+        <div class="power-indicator" id="power-indicator"></div>
+        <div class="tv-screen" id="tv-screen">
             <div class="tv-reflection"></div>
         </div>
         <div class="tv-stand"></div>
@@ -23,30 +23,37 @@
 
     <div class="remote-container">
         <div class="remote-logo"></div>
-        <div class="remote-screen">CH 01</div>
+        <div class="remote-screen" id="remote-screen"></div>
         
-        <button class="remote-button power-btn">⏻</button>
+        <p class="remote-button power-btn" style="padding-top: 5px;" onclick="powerOnTV()">⏻</button>
         
         <div class="number-grid">
-            <button class="remote-button number-btn">1</button>
-            <button class="remote-button number-btn">2</button>
-            <button class="remote-button number-btn">3</button>
-            <button class="remote-button number-btn">4</button>
-            <button class="remote-button number-btn">5</button>
-            <button class="remote-button number-btn">6</button>
-            <button class="remote-button number-btn">7</button>
-            <button class="remote-button number-btn">8</button>
-            <button class="remote-button number-btn">9</button>
+            <p class="remote-button number-btn" id="remote-button">1</p>
+            <p class="remote-button number-btn" id="remote-button">2</p>
+            <p class="remote-button number-btn" id="remote-button">3</p>
+            <p class="remote-button number-btn" id="remote-button">4</p>
+            <p class="remote-button number-btn" id="remote-button">5</p>
+            <p class="remote-button number-btn" id="remote-button">6</p>
+            <p class="remote-button number-btn" id="remote-button">7</p>
+            <p class="remote-button number-btn" id="remote-button">8</p>
+            <p class="remote-button number-btn" id="remote-button">9</p>
+        </div>
+        <!-- Botón 0 debajo del grid -->
+        <div style="display: flex; justify-content: center; margin-bottom: 6px;">
+            <p class="remote-button number-btn" id="remote-button">0</p>
         </div>
         
+        <p class="remote-button info-btn" id="info-button">INFO</p>
+
         <div class="nav-buttons">
-            <button class="remote-button vol-btn">VOL-</button>
-            <button class="remote-button vol-btn">VOL+</button>
-            <button class="remote-button ch-btn">CH-</button>
-            <button class="remote-button ch-btn">CH+</button>
+            <p class="remote-button vol-btn" onclick="decreaseVolume()">VOL-</p>
+            <p class="remote-button vol-btn" onclick="increaseVolume()">VOL+</p>
+            <p class="remote-button ch-btn" onclick="previousChannel()">CH-</p>
+            <p class="remote-button ch-btn" onclick="nextChannel()">CH+</p>
         </div>
         
         <div class="remote-brand">MILAREMOTE</div>
     </div>
+    <script src="js/script.js"></script>
 </body>
 </html>
